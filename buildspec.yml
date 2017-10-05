@@ -16,6 +16,6 @@ phases:
 artifacts:
   files:
     - NewSamTemplate.yaml
-    - target/aws-lex-lambda-fbapp-1.0-SNAPSHOT.jar
+    - build/distribution/lambda.zip
   discard-paths: yes
 
