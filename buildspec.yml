@@ -9,6 +9,9 @@ phases:
     commands:
       - echo Build started on `date`
       - gradle build
+      - mkdir deploy
+      - mkdir deploy/lib
+      - cp -r build/classes/java/main/* deploy
       - echo Build completed on `date`
       - echo Build is complete
   install:
@@ -18,5 +21,6 @@ phases:
 artifacts:
   type : zip
   files:
-    - build*/**
+    - NewSamTemplate.yaml
+    - deploy/**/*
 
