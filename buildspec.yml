@@ -17,7 +17,7 @@ artifacts:
   type : zip
   files:
     - NewSamTemplate.yaml
-    - *.*.class
-    - build/libs
+    - '*.*.class'
+    - '*.*.jar'
   base-directory : 'build/classes/java/main/com'
 
