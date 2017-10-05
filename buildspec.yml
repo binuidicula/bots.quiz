@@ -7,8 +7,10 @@ phases:
       - gradle test
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo Build started on `date`
       - gradle build
+      - echo Build completed on `date`
+      - echo Build is complete
   install:
     commands:
       - aws cloudformation package --template-file SamTemplate.yaml --s3-bucket codepipeline-us-east-1-987802409920
@@ -16,7 +18,5 @@ phases:
 artifacts:
   type : zip
   files:
-    - NewSamTemplate.yaml
-    - 'classes/*'
-    - 'libs/**/*'
+    - build*/**
 
