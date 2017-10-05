@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo Build started on `date`
+      - mvn test
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - mvn package
+  install:
+    commands:
+      - aws cloudformation package --template-file SamTemplate.yaml --s3-bucket codepipeline-us-east-1-987802409920
+                                   --output-template-file NewSamTemplate.yaml
+artifacts:
+  files:
+    - NewSamTemplate.yaml
+    - target/aws-lex-lambda-fbapp-1.0-SNAPSHOT.jar
+  discard-paths: yes
+
