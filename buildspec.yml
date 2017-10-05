@@ -4,11 +4,11 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn test
+      - gradle test
   post_build:
     commands:
       - echo Build completed on `date`
-      - mvn package
+      - gradle build
   install:
     commands:
       - aws cloudformation package --template-file SamTemplate.yaml --s3-bucket codepipeline-us-east-1-987802409920
