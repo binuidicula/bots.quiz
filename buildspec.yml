@@ -16,6 +16,6 @@ phases:
 artifacts:
   files:
     - NewSamTemplate.yaml
-    - build/distribution/lambda.zip
+    - build/distributions/lambda.zip
   discard-paths: yes
 
