@@ -14,8 +14,10 @@ phases:
       - aws cloudformation package --template-file SamTemplate.yaml --s3-bucket codepipeline-us-east-1-987802409920
                                    --output-template-file NewSamTemplate.yaml
 artifacts:
+  type : zip
   files:
     - NewSamTemplate.yaml
-    - build/distributions/lambda.zip
-  discard-paths: yes
+    - *.*.class
+    - build/libs
+  base-directory : 'build/classes/java/main/com'
 
