@@ -11,7 +11,7 @@ phases:
       - gradle build
       - mkdir deploy
       - mkdir deploy/lib
-      - cp -r build/classes/java/main/* deploy
+      - cp -r build/* deploy
       - ls -ltr deploy
       - ls -ltr build
       - echo Build completed on `date`
