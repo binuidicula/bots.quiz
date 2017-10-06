@@ -4,14 +4,15 @@ phases:
   build:
     commands:
       - echo Build started on `date`
+      - gradle build clean
       - gradle test
   post_build:
     commands:
       - echo Build started on `date`
       - gradle build
       - mkdir -p deploy
-      - cp -r build/classes/main/* deploy
-      - cp -r build/libs deploy
+      - cp -r build/classes/main/* deploy/
+      - cp -r build/libs deploy/
       - ls -ltr deploy
       - ls -ltr build
       - echo Build completed on `date`
