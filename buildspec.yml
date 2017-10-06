@@ -25,5 +25,5 @@ artifacts:
   type : zip
   files:
     - NewSamTemplate.yaml
-    - 'deploy/com/**/*'
-    - 'deploy/libs/**/*'
+    - 'com/**/*'
+    - 'libs/**/*'
