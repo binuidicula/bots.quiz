@@ -9,7 +9,7 @@ phases:
     commands:
       - echo Build started on `date`
       - gradle build
-      - mkdir deploy
+      - mkdir -p deploy
       - cp -r build/classes/main/* deploy
       - cp -r build/libs deploy
       - ls -ltr deploy
