@@ -21,10 +21,9 @@ phases:
     commands:
       - aws cloudformation package --template-file SamTemplate.yaml --s3-bucket codepipeline-us-east-1-987802409920
                                    --output-template-file NewSamTemplate.yaml
+      - cp NewSamTemplate.yaml deploy/
 artifacts:
   type : zip
   files:
-    - NewSamTemplate.yaml
-    - 'deploy/com/**/*'
-    - 'deploy/libs/**/*'
-  base-directory : 'deploy*'
+    - '**/*'
+  base-directory : 'deploy'
