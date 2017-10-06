@@ -11,7 +11,7 @@ phases:
       - gradle build
       - mkdir deploy
       - mkdir deploy/lib
-      - cp -r build/* deploy
+      - cp -r build/classes/main/* deploy
       - ls -ltr deploy
       - ls -ltr build
       - echo Build completed on `date`
@@ -24,5 +24,5 @@ artifacts:
   type : zip
   files:
     - NewSamTemplate.yaml
-    - '**/*'
+    - 'deploy/*'
 
