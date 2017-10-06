@@ -12,6 +12,7 @@ phases:
       - mkdir deploy
       - mkdir deploy/lib
       - cp -r build/classes/main/* deploy
+      - cp -r build/libs deploy
       - ls -ltr deploy
       - ls -ltr build
       - echo Build completed on `date`
@@ -25,4 +26,4 @@ artifacts:
   files:
     - NewSamTemplate.yaml
     - 'deploy/com/**/*'
-
+    - 'deploy/libs/**/*'

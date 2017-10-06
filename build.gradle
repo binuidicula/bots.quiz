@@ -30,4 +30,9 @@ task buildZip(type: Zip) {
     archiveName = 'lambda.zip'
 }
 
-build.dependsOn buildZip
+task copyToLib(type: Copy) {
+    into "$buildDir/libs"
+    from configurations.runtime
+}
+
+build.dependsOn buildZip, copyToLib
