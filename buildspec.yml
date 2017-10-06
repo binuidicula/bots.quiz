@@ -27,6 +27,4 @@ artifacts:
     - NewSamTemplate.yaml
     - 'deploy/com/**/*'
     - 'deploy/libs/**/*'
-  base-directory :
-    - 'libs'
-    - 'com'
+  base-directory : 'libs'
