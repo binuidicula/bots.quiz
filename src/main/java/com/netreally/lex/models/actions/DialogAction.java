@@ -4,6 +4,9 @@ import com.netreally.lex.models.DialogActionType;
 
 public class DialogAction {
 
+    DialogAction(){
+        type = null;
+    }
     public DialogActionType getType() {
         return type;
     }
