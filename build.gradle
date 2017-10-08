@@ -11,7 +11,6 @@ repositories {
 
 dependencies {
     testCompile (
-        'com.google.code.gson:gson:2.8.2',
         'junit:junit:4.12'
     )
 }
@@ -36,7 +35,7 @@ task buildZip(type: Zip) {
 }
 
 task copyToLib(type: Copy) {
-    into "$buildDir/libs"
+    into "$buildDir/lib"
     from configurations.runtime
 }
 

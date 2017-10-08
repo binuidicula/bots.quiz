@@ -18,7 +18,7 @@ phases:
       - mkdir -p deploy
       - cp -r build/classes/main/* deploy/
       - cp NewSamTemplate.yaml deploy/
-      - cp -r build/libs deploy/
+      - cp -r build/lib deploy/
       - ls -ltr deploy
       - ls -ltr build
       - echo Build completed on `date`
